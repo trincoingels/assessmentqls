@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductService
 {
-
     public function getProducts(): array
     {
         $products = Storage::disk('private')->get('products.json');

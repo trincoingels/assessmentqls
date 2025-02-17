@@ -30,7 +30,7 @@ class LabelService
             }
 
             Storage::disk('private')->put(basename($this->shippingLabel), base64_decode($response->json()['data']));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new \Exception('Cannot obtain label');
         }
     }
